@@ -38,6 +38,7 @@ You are solely responsible for complying with all applicable laws and regulation
 ```bash
 git clone https://github.com/AnvilBrain/Anvil-f.git
 cd Anvil-f
+cd anvil-f
 ```
 
 ---
@@ -56,6 +57,7 @@ Activate the environment before flashing.
 
 It is strongly recommended to erase flash before the first installation:
 
+Replace the serial port with the one used by your system.
 ```bash
 esptool.py --chip esp32c5 --port COM12 erase_flash
 ```
@@ -79,9 +81,7 @@ esptool.py --chip esp32c5 --port /dev/ttyUSB0 --baud 460800 write_flash \
   0x8000 firmware/partition_table/partition-table.bin \
   0x10000 firmware/anvil-f.bin
 ```
-
-Replace the serial port with the one used by your system.
-
+Open serial monitor on your esp32-c5 port
 ---
 
 # After Flashing
